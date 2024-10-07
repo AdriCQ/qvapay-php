@@ -19,7 +19,6 @@ class HttpClient
 
     }
 
-
     /**
      * Get the singleton instance of the Guzzle client.
      *
