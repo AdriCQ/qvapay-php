@@ -38,7 +38,8 @@ final readonly class PaymentLink extends BaseModule
     {
         $request = new Request(
             method: 'POST',
-            uri: 'payment_links/create'
+            uri: 'payment_links/create',
+            body: json_encode($params)
         );
 
         return $this->send($request);

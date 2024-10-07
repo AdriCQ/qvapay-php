@@ -48,7 +48,7 @@ final readonly class User extends BaseModule
      */
     public function topUpBalance(array $params): ResponseInterface
     {
-        $request = new Request(method: 'POST', uri: '/topup', body: $params);
+        $request = new Request(method: 'POST', uri: '/topup', body: json_encode($params));
 
         return $this->send($request);
     }
@@ -63,7 +63,7 @@ final readonly class User extends BaseModule
      */
     public function withdrawBalance(array $params): ResponseInterface
     {
-        $request = new Request(method: 'POST', uri: '/withdraw', body: $params);
+        $request = new Request(method: 'POST', uri: '/withdraw', body: json_encode($params));
 
         return $this->send($request);
     }

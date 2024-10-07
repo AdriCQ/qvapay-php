@@ -25,7 +25,7 @@ final readonly class Auth extends BaseModule
         $query = new Request(
             method: 'POST',
             uri: 'auth/login',
-            body: $params
+            body: json_encode($params)
         );
 
         return $this->handleAuthenticatedResponse($this->send($query));
@@ -66,7 +66,7 @@ final readonly class Auth extends BaseModule
         $query = new Request(
             method: 'POST',
             uri: 'auth/register',
-            body: $params
+            body: json_encode($params)
         );
 
         return $this->handleAuthenticatedResponse($this->send($query));
